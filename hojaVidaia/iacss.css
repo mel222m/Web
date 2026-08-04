@@ -1,0 +1,257 @@
+/* ==========================
+   FUENTE
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#3b82f6);
+    min-height:100vh;
+    padding:40px 20px;
+    color:#333;
+}
+
+/* ==========================
+   CONTENEDOR PRINCIPAL
+========================== */
+
+.cv-container{
+    max-width:950px;
+    margin:auto;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+    animation:fadeIn 1s ease;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.cv-header{
+    background:linear-gradient(135deg,#0f172a,#1d4ed8);
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:30px;
+    padding:40px;
+}
+
+.profile-image-container{
+    flex-shrink:0;
+}
+
+.profile-img{
+    width:170px;
+    height:170px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid white;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+    transition:.4s;
+}
+
+.profile-img:hover{
+    transform:scale(1.05) rotate(3deg);
+}
+
+.header-info h1{
+    font-size:2.4rem;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.header-info h2{
+    font-weight:300;
+    color:#dbeafe;
+}
+
+/* ==========================
+   SECCIONES
+========================== */
+
+.cv-section{
+    margin:25px;
+    padding:25px;
+    border-radius:15px;
+    background:#f8fafc;
+    transition:.35s;
+    border-left:6px solid #2563eb;
+}
+
+.cv-section:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(37,99,235,.15);
+}
+
+.cv-section h3{
+    color:#1d4ed8;
+    margin-bottom:18px;
+    font-size:1.4rem;
+    position:relative;
+    display:inline-block;
+}
+
+.cv-section h3::after{
+    content:'';
+    display:block;
+    width:70%;
+    height:3px;
+    background:#3b82f6;
+    margin-top:5px;
+    border-radius:10px;
+}
+
+/* ==========================
+   TEXTO
+========================== */
+
+p{
+    line-height:1.8;
+    color:#444;
+}
+
+strong{
+    color:#111827;
+}
+
+em{
+    color:#2563eb;
+    font-style:normal;
+    font-weight:500;
+}
+
+/* ==========================
+   LISTAS
+========================== */
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin:10px 0;
+    line-height:1.7;
+}
+
+li ul{
+    margin-top:10px;
+}
+
+li ul li{
+    list-style-type:"✔ ";
+    color:#555;
+}
+
+/* ==========================
+   CONTACTO
+========================== */
+
+.contact-section p{
+    margin:10px 0;
+}
+
+/* ==========================
+   REDES SOCIALES
+========================== */
+
+.social-links{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.social-links a{
+    text-decoration:none;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    padding:12px 25px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(37,99,235,.3);
+}
+
+.social-links a:hover{
+    transform:translateY(-5px);
+    background:linear-gradient(135deg,#1d4ed8,#0f172a);
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .cv-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .profile-img{
+        width:150px;
+        height:150px;
+    }
+
+    .header-info h1{
+        font-size:2rem;
+    }
+
+    .header-info h2{
+        font-size:1.1rem;
+    }
+
+    .cv-section{
+        margin:18px;
+        padding:20px;
+    }
+
+    .social-links{
+        justify-content:center;
+    }
+
+}
+
+/* ==========================
+   ANIMACIÓN
+========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
